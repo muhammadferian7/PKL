@@ -1,6 +1,6 @@
 @extends('layouts.app', [
     'class' => 'login-page',
-    'backgroundImagePath' => 'img/bg/fabio-mangione.jpg'
+    'backgroundImagePath' => 'img/bg/Pemkot_Batu.jpg'
 ])
 
 @section('content')
@@ -16,7 +16,6 @@
                             </div>
                         </div>
                         <div class="card-body ">
-
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
@@ -35,7 +34,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">
-                                        <i class="nc-icon nc-single-02"></i>
+                                        <i class="nc-icon nc-key-25"></i>
                                     </span>
                                 </div>
                                 <input class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="{{ __('Password') }}" type="password" required>
@@ -46,31 +45,25 @@
                                     </span>
                                 @endif
                             </div>
-
-                            <div class="form-group">
-                                <div class="form-check">
-                                     <label class="form-check-label">
-                                        <input class="form-check-input" name="remember" type="checkbox" value="" {{ old('remember') ? 'checked' : '' }}>
-                                        <span class="form-check-sign"></span>
-                                        {{ __('pals djc ') }}
-                                    </label>
-                                </div>
-                            </div>
                         </div>
 
                         <div class="card-footer">
                             <div class="text-center">
                                 <button type="submit" class="btn btn-warning btn-round mb-3">{{ __('Sign in') }}</button>
+                                </br>
+                                <button type="" class="btn btn-success btn-round mb-3">{{ __('Sign in With Google') }}</button>
+                                <br>
+                                <a href="{{ route('password.request') }}" class="btn btn-link">
+                                    {{ __('Forgot password') }}
+                                </a>
+                                <a href="{{ route('register') }}" class="btn btn-link float-right">
+                                    {{ __('Create Account') }}
+                                </a>
                             </div>
                         </div>
                     </div>
                 </form>
-                <a href="{{ route('password.request') }}" class="btn btn-link">
-                    {{ __('Forgot password') }}
-                </a>
-                <a href="{{ route('register') }}" class="btn btn-link float-right">
-                    {{ __('Create Account') }}
-                </a>
+                
             </div>
         </div>
     </div>
